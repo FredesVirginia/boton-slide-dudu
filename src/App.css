@@ -1,0 +1,54 @@
+.app {
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  background-color: red;
+}
+
+.slider-container {
+  
+  position: relative;
+  width: 300px;
+  height: 50px;
+  background: #eee;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.slider-container.active {
+  background: #7c3aed;
+  color: white;
+
+}
+
+.slider-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  font-weight: 500;
+}
+
+.slider-handle {
+
+
+  position: absolute;
+  top: 3px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgb(169, 34, 34);
+  color: #4c1d95;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+
