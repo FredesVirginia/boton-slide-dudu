@@ -111,7 +111,11 @@ export default function ButtonSlider({ disable = false, loading, confirmmed, chi
         {/* idle */}
         {!isLoading && !isConfirmed && (
           <>
-            <div className="slider-handle" style={{ left: `${dragX}px` }} onMouseDown={handleMouseDown}
+            <div className="slider-handle" style={{
+        left: `${dragX}px`,
+        transform: "translateY(-50%)",
+        transition: isDragging.current ? "none" : "background 0.1s ease, color 0.1s ease, transform 0.1s ease",
+      }} onMouseDown={handleMouseDown}
             
             >
               <FaChevronRight />
