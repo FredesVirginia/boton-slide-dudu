@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import "./App.css";
 
 import { FaChevronRight } from "react-icons/fa";
+import ButtonSlider from "./ButtonSlider";
 
 function App() {
   const offset = 5;
@@ -47,18 +48,16 @@ function App() {
 
   return (
     <div className="app">
-      <div
-        className={`slider-container ${isActive ? "active" : ""}`}
-        ref={sliderRef}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseUp}
-      >
-        <div className="slider-handle" style={{ left: `${dragX}px` }} onMouseDown={handleMouseDown}>
-          <FaChevronRight />
-        </div>
-        <span className="slider-text">{isActive ? "Activado" : "Desliza para activar"}</span>
-      </div>
+     <ButtonSlider simulateApi>Simulación API</ButtonSlider>
+
+     <ButtonSlider>Desliza para avanzar</ButtonSlider>
+
+<ButtonSlider confirmmed>Confirmado externo</ButtonSlider>
+
+<ButtonSlider loading>Loading externo</ButtonSlider>
+
+
+
     </div>
   );
 }
