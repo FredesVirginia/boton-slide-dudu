@@ -30,33 +30,8 @@
    background: #1a0f4b; /* azul más oscuro */
   transition: background 0.5s ease;
 }
-
-.slider-text {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  pointer-events: none;
-  font-weight: 500;
-  color: white;
-  transition: color 0.6s ease, opacity 0.6s ease;
-}
-
 .slider-container.active .slider-text {
   color: #210464; /* texto azul sobre fondo blanco */
-}
-
-.slider-handle {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
- background-color: #f3f4f6;
-  transition: left 0.6s ease, transform 0.6s ease, background 0.4s ease, color 0.4s ease;
 }
 
 .slider-container.loading,
@@ -75,11 +50,39 @@
 }
 
 
-/* Fondo más azul al llegar al final */
-.slider-container.active {
-  background: #1a0f4b; /* azul más oscuro */
-  transition: background 0.5s ease;
+
+.slider-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  font-weight: 500;
+  color: white;
+  transition: color 0.6s ease, opacity 0.6s ease;
 }
+
+
+
+.slider-handle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ background-color: #f3f4f6;
+  transition: left 0.6s ease, transform 0.6s ease, background 0.4s ease, color 0.4s ease;
+}
+
+
+
+
+
+/* Fondo más azul al llegar al final */
+
 
 /* Texto desaparece suavemente */
 .slider-text.fade-out {

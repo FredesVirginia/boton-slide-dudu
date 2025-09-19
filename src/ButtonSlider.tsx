@@ -78,15 +78,15 @@ export default function ButtonSlider({ disable = false, loading, confirmmed, chi
   return (
     <div className="app">
       <div
-       className={`slider-container ${
-    phase === "loading"
-      ? "loading"
-      : phase === "confirmed"
-      ? "confirmed"
-      : isActive
-      ? "active"
-      : ""
-  }`}
+        className={`slider-container ${
+          confirmmed || phase === "confirmed"
+            ? "confirmed"
+            : loading || phase === "loading"
+            ? "loading"
+            : isActive
+            ? "active"
+            : ""
+        }`}
         ref={sliderRef}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
@@ -111,7 +111,9 @@ export default function ButtonSlider({ disable = false, loading, confirmmed, chi
         {/* idle */}
         {!isLoading && !isConfirmed && (
           <>
-            <div className="slider-handle" style={{ left: `${dragX}px` }} onMouseDown={handleMouseDown}>
+            <div className="slider-handle" style={{ left: `${dragX}px` }} onMouseDown={handleMouseDown}
+            
+            >
               <FaChevronRight />
             </div>
             <span className={`slider-text ${isActive ? "fade-out" : "fade-in"}`}>{children}</span>
