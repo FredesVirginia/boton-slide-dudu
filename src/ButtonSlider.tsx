@@ -78,7 +78,15 @@ export default function ButtonSlider({ disable = false, loading, confirmmed, chi
   return (
     <div className="app">
       <div
-        className={`slider-container ${confirmmed ? "confirmed" : loading ? "loading" : ""} ${isActive ? "active" : ""}`}
+       className={`slider-container ${
+    phase === "loading"
+      ? "loading"
+      : phase === "confirmed"
+      ? "confirmed"
+      : isActive
+      ? "active"
+      : ""
+  }`}
         ref={sliderRef}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}

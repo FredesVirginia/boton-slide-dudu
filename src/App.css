@@ -27,7 +27,8 @@
  
 }
 .slider-container.active {
-  background: white; /* fondo blanco al deslizar */
+   background: #1a0f4b; /* azul más oscuro */
+  transition: background 0.5s ease;
 }
 
 .slider-text {
