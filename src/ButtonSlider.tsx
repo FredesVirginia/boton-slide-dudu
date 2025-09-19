@@ -106,7 +106,7 @@ export default function ButtonSlider({ disable = false, loading, confirmmed, chi
             <div className="slider-handle" style={{ left: `${dragX}px` }} onMouseDown={handleMouseDown}>
               <FaChevronRight />
             </div>
-            <span className="slider-text fade-in">{children}</span>
+            <span className={`slider-text ${isActive ? "fade-out" : "fade-in"}`}>{children}</span>
           </>
         )}
       </div>

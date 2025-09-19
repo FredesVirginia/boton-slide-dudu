@@ -48,16 +48,13 @@ function App() {
 
   return (
     <div className="app">
-     <ButtonSlider simulateApi>Simulación API</ButtonSlider>
+      <ButtonSlider simulateApi>Simulación API</ButtonSlider>
 
-     <ButtonSlider>Desliza para avanzar</ButtonSlider>
+      <ButtonSlider>Desliza para avanzar</ButtonSlider>
 
-<ButtonSlider confirmmed>Confirmado externo</ButtonSlider>
+      <ButtonSlider confirmmed>Confirmado externo</ButtonSlider>
 
-<ButtonSlider loading>Loading externo</ButtonSlider>
-
-
-
+      <ButtonSlider loading>Loading externo</ButtonSlider>
     </div>
   );
 }

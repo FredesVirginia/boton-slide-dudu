@@ -74,6 +74,25 @@
 }
 
 
+/* Fondo más azul al llegar al final */
+.slider-container.active {
+  background: #1a0f4b; /* azul más oscuro */
+  transition: background 0.5s ease;
+}
+
+/* Texto desaparece suavemente */
+.slider-text.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Texto visible */
+.slider-text.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+
 /* --- ESTADOS DEL HANDLE --- */
 
 /* Normal y Loading → handle blanco, icono azul */
